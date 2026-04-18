@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .welcome {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4em;
+            animation: fadeIn 2s ease-in-out, moveToTopLeft 1s ease-in-out 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes moveToTopLeft {
+            to { top: 0; left: 0; transform: translate(0, 0); }
+        }
+        .by {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 20px);
+            font-size: 1.5em;
+            opacity: 0;
+            animation: fadeInBy 2s ease-in-out 2s forwards, moveToBelow 1s ease-in-out 4s forwards;
+        }
+        @keyframes fadeInBy {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes moveToBelow {
+            to { top: 80px; left: 0; transform: translate(0, 0); }
+        }
+        .about {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            opacity: 0;
+            animation: fadeInAbout 2s ease-in-out 5s forwards;
+        }
+        @keyframes fadeInAbout {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .about a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .about a:hover {
+            text-decoration: underline;
+        }
+        .qa {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            animation: fadeInQA 2s ease-in-out 6s forwards;
+        }
+        @keyframes fadeInQA {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .qa h2 {
+            margin-top: 0;
+        }
+        .qa textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .qa button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .qa button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">Welcome</div>
+    <div class="by">By: J4ED</div>
+    <div class="about">
+        <strong>About me:</strong><br>
+        <p>Hello, this is me, J4ED, and I learned how to code lately, and I love it! And since I realized, I watched a tutorial on how to make a website with coding, and i found it really interesting, it's called VS Code, with i coded with HTML, and yeah tell me any questions you have.</p><br>
+        <strong style="color: blue;">Learn More</strong><br>
+        <a href="http://www.youtube.com/@Coinship132">YouTube</a> |
+        <a href="https://discord.gg/DMFq2rN5">Discord</a>
+    </div>
+    <div class="qa">
+        <h2>Q&A</h2>
+        <form action="mailto:geortyboblox@gmail.com" method="post" enctype="text/plain">
+            <textarea name="question" placeholder="Type your question here..."></textarea><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
